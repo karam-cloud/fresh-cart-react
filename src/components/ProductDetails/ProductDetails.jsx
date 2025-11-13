@@ -16,11 +16,11 @@ export default function ProductDetails() {
   };
   useEffect(() => {
     getProduct();
-  }, []);
+  }, );
 
   return (
     <>
-      {Product.length != 0 ? (
+      {Product.length !== 0 ? (
         <div className="container">
           <div className="row">
             <div className="col-md-3">

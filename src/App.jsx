@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+// import React, { Children } from 'react'
 import { RouterProvider,createBrowserRouter } from 'react-router-dom'
 import MainLayout from './Layout/MainLayout'
 import Products from './components/Products/Products'
@@ -8,10 +8,10 @@ import Rigister from './components/Rigister/Rigister'
 import Login from './components/Login/Login'
 import { ToastContainer} from 'react-toastify';
 import CartContextProvider from './context/cartContext'
-import Navbar from './components/Navbar/Navbar'
+// import Navbar from './components/Navbar/Navbar'
 import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout'
-import { Offline, Online } from "react-detect-offline";
+import  {Offline as OfflineComponent }  from "react-detect-offline";
 import Category from './components/Category/Category';
 import Brands from "./components/Brands/Brands"
 export default function App() {
@@ -33,8 +33,8 @@ export default function App() {
   return (
     <>
             <ToastContainer theme='colored' />
-     { <CartContextProvider> 
-    <Offline> <div className='network'><i class="fa-solid fa-globe"> Check your internet connection</i></div></Offline>
+      { <CartContextProvider> 
+    <OfflineComponent> <div className='network'><i class="fa-solid fa-globe"> Check your internet connection</i></div></OfflineComponent>
       <RouterProvider router={router}/>
       </CartContextProvider> }
     </>

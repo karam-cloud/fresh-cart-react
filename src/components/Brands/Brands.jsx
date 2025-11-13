@@ -21,7 +21,7 @@ export default function Brands() {
       <Helmet>
         <title>Brands </title>
       </Helmet>
-      {Brands.length != 0 ? (
+      {Brands.length !== 0 ? (
         <div className="container">
           <div className="row my-2 align-items-center">
             <h2 className="text-main">Our Brands</h2>

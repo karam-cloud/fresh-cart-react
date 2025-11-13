@@ -29,7 +29,7 @@ export default function Cart() {
       if (response.data && response.data.data) {
         setCart(response.data.data.products);
         setTotalPrice(response.data.data.totalCartPrice);
-        if(response.status==200){
+        if(response.status===200){
           const notify = (msg,type) => {
             toast[type](msg);
           };
@@ -48,7 +48,7 @@ export default function Cart() {
       if (response.data && response.data.data) {
         setCart(response.data.data.products);
         setTotalPrice(response.data.data.totalCartPrice);
-        if(response.status==200){
+        if(response.status===200){
           const notify = (msg,type) => {
             toast[type](msg);
           };
@@ -62,10 +62,10 @@ export default function Cart() {
 
   useEffect(() => {
     getCart();
-  }, []);
+  }, );
 
   return (
-   
+  
     <>
 
 <Helmet>
@@ -73,7 +73,7 @@ export default function Cart() {
 </Helmet>;
 
 
-     {cart.length!=0 ? <div className="container">
+     {cart.length!==0 ? <div className="container">
         <div className="bg-main-light p-3 my-4">
           <h3>Shop Cart</h3>
           <h6 className="text-main my-3">Total Cart Price: {totalPrice} EGP</h6>

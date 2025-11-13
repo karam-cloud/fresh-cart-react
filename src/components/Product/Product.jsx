@@ -11,7 +11,7 @@ export default function Product({ Products }) {
     let token = localStorage.getItem("token");
     if (token) {
       let response = await addToCart(token, productId);
-      if (response.status == 200) {
+      if (response.status === 200) {
         getCartCount();
         const notify = (msg, type) => {
           toast[type](msg);

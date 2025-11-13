@@ -21,7 +21,7 @@ export default function Category() {
       <Helmet>
         <title>Category</title>
       </Helmet>
-      {Categories.length != 0 ? (
+      {Categories.length !== 0 ? (
         <div className="container">
           <div className="row my-2 align-items-center">
             <h2 className="text-main">Our Catigories</h2>

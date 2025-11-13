@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import logo from "../../images/freshcart-logo.svg";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink }  from "react-router-dom";
 import { CartContext } from "../../context/cartContext";
 
 export default function Navbar() {
